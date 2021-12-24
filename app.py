@@ -6,7 +6,7 @@ menu_options = {
     2: 'Salir'
 }
 
-def chaeck_system():
+def check_system():
     system_operation = platform.system()
     command = 'clear'
     if system_operation == 'win32' or system_operation == 'cygwin':
@@ -20,7 +20,7 @@ def print_menu():
         print(f'{key} -- {menu_options[key]}')
 
 if __name__=='__main__':
-    command = chaeck_system()
+    command = check_system()
     while(True):
         print_menu()
         option = ''
@@ -43,6 +43,7 @@ if __name__=='__main__':
                 break
             else:
                 raise
+
         except Exception:
             clear_console(command)
             print('Valor erroneo. Por favor ingrese un numero')
