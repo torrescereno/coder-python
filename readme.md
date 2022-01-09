@@ -1,7 +1,7 @@
 ## Creación de entorno
 
 ```
-python3 -m venv env
+python3 -m venv /path/to/new/virtual/environment
 
 POSIX
 $ source <venv>/bin/activate
