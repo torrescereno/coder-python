@@ -11,9 +11,10 @@
 
 """
 
-import os
-import platform
+
 import requests
+
+from utilities import clear_console, check_system, print_menu
 
 menu_options = {
     1: "Sumar dos numeros",
@@ -26,27 +27,6 @@ menu_options = {
 URL = "https://zenquotes.io/api/random"
 
 
-def check_system():
-    system_operation = platform.system()
-    command = "clear"
-    if (
-        system_operation == "win32"
-        or system_operation == "cygwin"
-        or system_operation == "Windows"
-    ):
-        command = "cls"
-    return command
-
-
-def clear_console(command):
-    return os.system(command)
-
-
-def print_menu():
-    for key in menu_options.keys():
-        print(f"{key} -- {menu_options[key]}")
-
-
 def get_values():
     value_1 = int(input("Ingrese primer valor: "))
     value_2 = int(input("Ingrese segundo valor: "))
@@ -56,7 +36,7 @@ def get_values():
 if __name__ == "__main__":
     command = check_system()
     while True:
-        print_menu()
+        print_menu(menu_options)
         option = ""
         try:
             option = int(input("Por favor seleccione una opcion: "))
@@ -78,7 +58,7 @@ if __name__ == "__main__":
                 print(
                     f"""
                 Valores ingresados: {value_1} {value_2}
-                La resta de los valores es: {value_1 + value_2}
+                La resta de los valores es: {value_1 - value_2}
                 """
                 )
 
@@ -87,7 +67,7 @@ if __name__ == "__main__":
                 print(
                     f"""
                 Valores ingresados: {value_1} {value_2}
-                La multiplicacion de los valores es: {value_1 + value_2}
+                La multiplicacion de los valores es: {value_1 * value_2}
                 """
                 )
 
