@@ -4,7 +4,7 @@ que devuelva el área del rectángulo a partir de una base y una altura.
 Calcula el área de un rectángulo de 15 de base y 10 de altura
 """
 
-from utilities import check_system, clear_console, print_menu
+from utilities import check_system, clear_console
 
 
 def area_rectangulo(l, b):
