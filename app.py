@@ -1,50 +1,57 @@
 import os
 import platform
 
-menu_options = {
-    1: 'Calcular notas',
-    2: 'Salir'
-}
+menu_options = {1: "Calcular notas", 2: "Salir"}
+
 
 def check_system():
     system_operation = platform.system()
-    command = 'clear'
-    if system_operation == 'win32' or system_operation == 'cygwin':
-        command = 'cls'
+    command = "clear"
+    if (
+        system_operation == "win32"
+        or system_operation == "cygwin"
+        or system_operation == "Windows"
+    ):
+        command = "cls"
     return command
 
-def clear_console(command): return os.system(command)
+
+def clear_console(command):
+    return os.system(command)
+
 
 def print_menu():
     for key in menu_options.keys():
-        print(f'{key} -- {menu_options[key]}')
+        print(f"{key} -- {menu_options[key]}")
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     command = check_system()
-    while(True):
+    while True:
         print_menu()
-        option = ''
+        option = ""
         try:
-            option = int(input('Por favor seleccione una opcion: '))
+            option = int(input("Por favor seleccione una opcion: "))
 
             if option == 1:
-                value_1 = int(input('Ingrese primera nota: '))
-                value_2 = int(input('Ingrese segunda nota: '))
-                result = (value_1*40/100) + (value_2*60/100)
+                value_1 = int(input("Ingrese primera nota: "))
+                value_2 = int(input("Ingrese segunda nota: "))
+                result = (value_1 * 40 / 100) + (value_2 * 60 / 100)
                 clear_console(command)
-                print(f"""
+                print(
+                    f"""
                 Primera nota {value_1} correspondiente al 40%
                 Segunda nota {value_2} correspondiente al 60%
                 Resultado {result}
-                """)
+                """
+                )
             elif option == 2:
                 clear_console(command)
-                print('Gracias por usar el programa')
+                print("Gracias por usar el programa")
                 break
             else:
                 raise
 
         except Exception:
             clear_console(command)
-            print('Valor erroneo. Por favor ingrese un numero')
-
+            print("Valor erroneo. Por favor ingrese un numero")
