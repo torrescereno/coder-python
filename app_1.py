@@ -19,7 +19,7 @@ if __name__ == "__main__":
             l = int(input("Ingrese la altura "))
             b = int(input("Ingrese la base "))
             area = area_rectangulo(l, b)
-            print(f"El area del rectangulo es: {area}")
+            print(f"El área del rectangulo es: {area}")
             break
     except Exception:
         clear_console(command)
