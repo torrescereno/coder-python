@@ -24,7 +24,7 @@ if __name__ == "__main__":
     command = check_system()
     try:
         while True:
-            print("Calculo del área de un círculo")
+            print("Calculo de relación de números")
             a = int(input("Ingrese el primer número: "))
             b = int(input("Ingrese el segundo número: "))
             result = relacion(a, b)
