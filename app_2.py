@@ -16,7 +16,7 @@ if __name__ == "__main__":
     command = check_system()
     try:
         while True:
-            print("Calculo del área de un círculo")
+            print("Cálculo del área de un círculo")
             r = float(input("Ingrese el radio: "))
             area = round(area_circulo(r), 2)
             print(f"El área del círculo es: {area}")
