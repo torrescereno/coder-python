@@ -15,7 +15,7 @@ if __name__ == "__main__":
     command = check_system()
     try:
         while True:
-            print("Calculo del area de un rectangulo")
+            print("Calculo del área de un rectángulo")
             l = int(input("Ingrese la altura "))
             b = int(input("Ingrese la base "))
             area = area_rectangulo(l, b)
