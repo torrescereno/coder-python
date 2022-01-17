@@ -14,15 +14,11 @@ print(list(range(0, 11)))
 # Negativos
 print(list(range(-10, 1)))
 
-# Numeros pares
+# Números pares
 print(list(range(0, 21, 2)))
 
-# Numeros impares
-numbers = range(-20, 1)
-list_numbers = [num for num in numbers if num % 2 != 0]
-print(list_numbers)
+# Números impares
+print(list(range(-19, 0, 2)))
 
-# Numeros múltiples de 5
-numbers = range(0, 51)
-list_numbers = [num for num in numbers if num % 5 == 0]
-print(list_numbers)
+# Números múltiples de 5
+print(list(range(0, 55, 5)))
