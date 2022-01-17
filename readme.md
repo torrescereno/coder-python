@@ -3,7 +3,7 @@
 ```
 python3 -m venv /path/to/new/virtual/environment
 
-POSIX
+Linux y Mac
 $ source <venv>/bin/activate
 
 Windows
