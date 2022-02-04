@@ -12,9 +12,9 @@ from utilities import check_system, clear_console
 
 
 def recortar(a, b, c):
-    if b < a:
+    if a < b:
         return b
-    if c > a:
+    if a > c:
         return c
     return a
 
