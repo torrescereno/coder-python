@@ -31,6 +31,8 @@ Proyecto que contiene todos los desafíos del curso de python nivel intermedio
 23. Playground avanzado (parte 2)
 24. Playground avanzado (parte 3)
 
+## Perfil
+
 - Utilizar entornos virtuales con Pipenv para gestionar cómodamente tus
 proyectos.
 - Aplicar Django Framework y su MVT basado en Modelos, Vistas y
